@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>IPTables > Règles NAT</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <link href="https://fonts.googleapis.com/css?family=Arsenal" rel="stylesheet">
+  <link href="static/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="static/iptables/css/common.css" rel="stylesheet" />
+</head>
+
+<body>
+
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index">IPTABLES</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index">Informations système</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="alias">Alias</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="rules_nat">Règles NAT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="rules_filter">Règles Filtrage</a>
+            </li>
+          </ul>
+        </div>
+
+        <ul class="nav justify-content-end">
+          <li class="logo nav-item"><img src="images/iptables.jpg" /></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <section>
+    <div class="container">
+      <div class="row">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Règles NAT</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <div class="card-header">
+              Voici les règles de NAT du système
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Voici les règles de NAT du système</h5>
+              <p class="card-text">
+
+              <table id="myTab" class="table table-striped">
+                <thead>
+                  <tr>
+                    <th>Nom de la règle</th>
+                    <th>Type</th>
+                    <th>Adresse IP</th>
+                    <th>Port</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>NAT le port 22 sur le serveur Web1</td>
+                    <td>Source NAT</td>
+                    <td>10.0.0.1</td>
+                    <td>22</td>
+                  </tr>
+                  <tr>
+                    <td>NAT le port 443 sur le serveur Web1</td>
+                    <td>Source NAT</td>
+                    <td>10.0.0.1</td>
+                    <td>443</td>
+                  </tr>
+                  <tr>
+                    <td>NAT le port 80 sur le serveur Web1</td>
+                    <td>Dest NAT</td>
+                    <td>10.0.0.1</td>
+                    <td>80</td>
+                  </tr>
+                  <tr>
+                    <td>NAT le port 22 sur le serveur Web2</td>
+                    <td>Source NAT</td>
+                    <td>10.0.0.2</td>
+                    <td>22</td>
+                  </tr>
+                  <tr>
+                    <td>NAT le port 443 sur le serveur Web2</td>
+                    <td>Dest NAT</td>
+                    <td>10.0.0.2</td>
+                    <td>443</td>
+                  </tr>
+                  <tr>
+                    <td>NAT le port 80 sur le serveur Web2</td>
+                    <td>Dest NAT</td>
+                    <td>10.0.0.2</td>
+                    <td>80</td>
+                  </tr>
+                  <tr>
+                    <td>NAT le port 22 sur le serveur LB</td>
+                    <td>Source NAT</td>
+                    <td>10.0.0.10</td>
+                    <td>22</td>
+                  </tr>
+                  <tr>
+                    <td>NAT le port 443 sur le serveur LB</td>
+                    <td>Dest NAT</td>
+                    <td>10.0.0.10</td>
+                    <td>443</td>
+                  </tr>
+                  <tr>
+                    <td>NAT le port 80 sur le serveur LB</td>
+                    <td>Source NAT</td>
+                    <td>10.0.0.10</td>
+                    <td>80</td>
+                  </tr>
+                  <tr>
+                    <td>NAT le port 1433 sur le serveur SQL</td>
+                    <td>Dest NAT</td>
+                    <td>10.0.0.20</td>
+                    <td>1433</td>
+                  </tr>
+                </tbody>
+              </table>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <nav class="navbar fixed-bottom navbar-light bg-light">
+      <div class="container-fluid">
+        Copyright Univ-Savoie
+      </div>
+    </nav>
+  </footer>
+  <script src="static/bootstrap/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>

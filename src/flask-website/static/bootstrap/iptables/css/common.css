@@ -1,0 +1,23 @@
+li.logo {
+    width: 60px;
+}
+li.logo img {
+  width: 100%;
+}
+section {
+  padding: 25px;
+}
+#content {
+  padding: 25px;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+footer nav {
+  margin-bottom: 0px !important;
+}
+footer nav div {
+  line-height: 50px;
+}
